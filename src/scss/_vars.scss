@@ -1,0 +1,25 @@
+// Your variables are stored here
+
+// ====================================================================================================================================================================
+
+:root {
+  // Colors
+  --color-black: #{hextorgb(#000)};
+  --color-white: #{hextorgb(#fff)};
+
+  // Indents
+  --section-offset: 60px;
+
+  // Borders
+  --border-radius: 4px;
+
+  // Fonts
+  --font-family: sans-serif;
+
+  // Typefaces
+  --large-bold-font: 700 30px / 140% var(--font-family);
+  --middle-bold-font: 700 20px / 140% var(--font-family);
+  --medium-bold-font: 700 24px / 140% var(--font-family);
+}
+
+// ====================================================================================================================================================================
