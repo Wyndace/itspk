@@ -2,20 +2,23 @@
 <html lang="ru">
 
 <head>
-  @include('./html/mixins/_head.html', {'title': 'WynGulp'})
+  @include('./html/mixins/_head.html', {'title': 'IT-SPK'})
 </head>
 
-<body>
+<body style="color:#fbe0cd; background: rgb(38, 164, 236);">
+  <div
+    style="position: absolute; top:0; left: 0; right: 0; bottom: 0; background: url('./resources/back.png') center center no-repeat; pointer-events: none;">
+  </div>
   <div class="site-container">
     <div style="padding: 15px">
-      <h1 style="margin:0; margin-bottom: 5px;">Hi, user! This page is needed to debug other pages, as well as
-        convenient to watch all Existing pages!</h1>
+      <h1 style="margin:0; margin-bottom: 5px;">Привет, пользователь! <br> Эта страница необходима для удобного
+        просмотра всех существующих страниц!</h1>
     </div>
     <main class="page">
-      <p style="margin: 0; margin-bottom: 5px; margin-left: 15px;">All pages:</p>
+      <p style="margin: 0; margin-bottom: 5px; margin-left: 15px;">Странички:</p>
       <ul style="margin: 0;">
         <li>
-          <a href="./page.html">Page</a>
+          <a style="color: #fbe0cd; text-decoration: underline;" href="./page.html">Основная страница</a>
         </li>
       </ul>
     </main>

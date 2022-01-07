@@ -6,6 +6,12 @@
   // Colors
   --color-black: #{hextorgb(#000)};
   --color-white: #{hextorgb(#fff)};
+  --color-dark: #{hextorgb(#001e42)};
+  --color-light: #{hextorgb(#00feff)};
+  --color-txt: #{hextorgb(#252d37)};
+  --color-txt-light: #{hextorgb(#a5aaaf)};
+  --color-ultra-dark: #{hextorgb(#06182f)};
+  --color-midnight-blue: #{hextorgb(#013571)};
 
   // Indents
   --section-offset: 60px;
@@ -14,12 +20,15 @@
   --border-radius: 4px;
 
   // Fonts
-  --font-family: sans-serif;
+  --font-family: "Montserrat", sans-serif;
 
   // Typefaces
-  --large-bold-font: 700 30px / 140% var(--font-family);
-  --middle-bold-font: 700 20px / 140% var(--font-family);
-  --medium-bold-font: 700 24px / 140% var(--font-family);
+  --font-base: 400 18px / 140% var(--font-family);
+  --font-title: 700 50px / 140% var(--font-family);
+  --font-bold: 700 24px / 130% var(--font-family);
+  --font-mob-base: 400 16px / 140% var(--font-family);
+  --font-mob-bold: 700 22px / 130% var(--font-family);
+  --font-mob-tite: 700 36px / 140% var(--font-family);
 }
 
 // ====================================================================================================================================================================
