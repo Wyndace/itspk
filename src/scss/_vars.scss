@@ -12,6 +12,7 @@
   --color-txt-light: #{hextorgb(#a5aaaf)};
   --color-ultra-dark: #{hextorgb(#06182f)};
   --color-midnight-blue: #{hextorgb(#013571)};
+  --color-gray: #{hextorgb(#f2f2f2)};
 
   // Indents
   --section-offset: 60px;
@@ -23,12 +24,9 @@
   --font-family: "Montserrat", sans-serif;
 
   // Typefaces
-  --font-base: 400 18px / 140% var(--font-family);
-  --font-title: 700 50px / 140% var(--font-family);
-  --font-bold: 700 24px / 130% var(--font-family);
-  --font-mob-base: 400 16px / 140% var(--font-family);
-  --font-mob-bold: 700 22px / 130% var(--font-family);
-  --font-mob-tite: 700 36px / 140% var(--font-family);
+  --font-base: 400 #{adaptive-value(18, 16, 1120)} / 140% #{cl(font-family)};
+  --font-title: 700 #{adaptive-value(50, 36, 1120)} / 140% #{cl(font-family)};
+  --font-bold: 700 #{adaptive-value(24, 22, 1120)} / 140% #{cl(font-family)};
 }
 
 // ====================================================================================================================================================================
