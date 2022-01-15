@@ -1,1 +1,31 @@
-// Automatically appear icons from the folder with path "/src/img/fonts"
+@font-face {
+  src: url("../../fonts/itspk-icons.woff2") format("woff2");
+  font-family: "itspk-icons";
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10%;
+
+  &::after {
+    font-family: "itspk-icons", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant: normal;
+    text-decoration: none;
+    text-transform: none;
+    background-color: inherit;
+  }
+
+  &-arrow::after {
+    content: "\E001";
+  }
+
+  &-download::after {
+    content: "\E002";
+  }
+}
