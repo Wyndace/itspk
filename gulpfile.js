@@ -98,14 +98,14 @@ const iconfontBuilding = () => {
       iconfontCSS({
         fontName: `${buildDir}-icons`,
         targetPath: "../../src/scss/_iconfont.scss",
-        fontPath: "../../fonts/",
+        fontPath: "../fonts/",
       })
     )
     .pipe(
       iconfont({
         fontName: `${buildDir}-icons`,
         prependUnicode: true,
-        formats: ["woff2", "svg"],
+        formats: ["woff2"],
         normalize: true,
         fontHeight: 1001,
       })
