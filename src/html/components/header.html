@@ -12,7 +12,7 @@
     <nav class="header__nav nav">
       <ul data-da=".menu-burger__body, 802, 2" class="nav__list _list-reset">
         <li class="nav__item">
-          <a data-scroll_to="#aboutus" href=" #aboutus" class="nav__link _link-reset">О нас</a>
+          <a data-scroll_to="#aboutus" href="#aboutus" class="nav__link _link-reset">О нас</a>
         </li>
         <li class="nav__item">
           <a data-scroll_to="#services" href="#services" class="nav__link _link-reset">Услуги</a>
@@ -22,8 +22,8 @@
         </li>
       </ul>
     </nav>
-    <div class="header__phones phones">
-      <ul data-da=".menu-burger__body, 802, 1" class="phones__list _list-reset">
+    <div data-da=".menu-burger__body, 802, 1" class="header__phones phones">
+      <ul class="phones__list _list-reset">
         <li class="phones__item">
           <span class="phones__name">lifecell</span>
           <a class="phones__tel _link-reset" href="tel:+380935412092">+380 93 541 20 92</a>
@@ -38,7 +38,10 @@
       <button type="button" data-burger_button class="burger__icon _btn-reset">
         <span></span>
       </button>
-      <ul class="burger__menu menu-burger _list-reset">
+      <ul class="burger__menu menu-burger _list-reset" data-burger_body>
+        <button data-da=".menu-burger__body, 802, 2"
+          class="burger__btn btn btn_primary _btn-reset icon icon-arrow">Отправить
+          заявку</button>
         <div class="menu-burger__body">
           <div class="burger__logo logo _img-holder">
             <img src="./img/logo2.svg" alt="IT-SPK">

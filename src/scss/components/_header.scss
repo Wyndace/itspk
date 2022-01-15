@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   z-index: 50;
@@ -228,6 +228,9 @@
     pointer-events: none;
   }
 
+  &__btn {
+  }
+
   &__icon {
     position: absolute;
     left: 0;
@@ -337,14 +340,13 @@
     left: 0;
     right: 0;
     top: 0;
-    margin-top: -100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: cl(color-dark);
-    background: cl(color-white);
-    transition: margin-top 0.8s ease-out;
+    margin-top: -100vh;
+    opacity: 0;
+    transition: all 5s ease, margin-top 0.8s ease-out;
+    pointer-events: none;
   }
 
   ._active & {
@@ -365,6 +367,10 @@
 
       &__menu {
         margin-top: 0;
+        background: cl(color-white);
+        opacity: 1;
+        transition: all 0s ease, margin-top 1s ease-out;
+        pointer-events: all;
       }
 
       @keyframes up-rotate {
@@ -441,12 +447,13 @@
 
 .menu-burger {
   z-index: 10;
+  overflow: hidden scroll;
+  max-height: 100%;
 
   &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 40px;
     min-width: 298px;
     max-width: 100%;
@@ -459,7 +466,7 @@
 
       &__item {
         flex-direction: row-reverse;
-        gap: 16px;
+        gap: 0 16px;
       }
 
       &__name {
@@ -468,7 +475,7 @@
       }
 
       &__tel {
-        font-size: 18px;
+        font-size: adaptive-value(18, 16, 1120);
         color: cl(color-dark);
 
         &::after {
