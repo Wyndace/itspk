@@ -110,7 +110,8 @@ a {
 ._img-holder {
   position: relative;
 
-  img {
+  img,
+  use {
     position: absolute;
     left: 0;
     top: 0;
@@ -127,6 +128,39 @@ a {
 
 .skiptranslate {
   @extend ._hidden;
+}
+
+.btn {
+  padding: 15px 22px;
+  width: auto;
+  font: cl(font-bold);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: box-shadow 0.5s ease;
+
+  &_primary {
+    color: cl(color-text);
+    background: cl(color-light);
+  }
+
+  &:active {
+    box-shadow: 0 4px 4px cl(color-black, 0.25);
+    transition: box-shadow 0.25s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 4px 4px cl(color-black, 0.25);
+      transition: box-shadow 0.5s ease;
+    }
+
+    &:active {
+      box-shadow: none;
+      transition: box-shadow 0.25s ease;
+    }
+  }
 }
 
 // ========================================================================================================================================================================
