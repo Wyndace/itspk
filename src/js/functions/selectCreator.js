@@ -28,14 +28,11 @@ if (selects.length > 0) {
           });
           needClass.forEach((needy) => {
             let oldClass = needy.classList.value.split("custom-select");
-            console.log(oldClass);
             let newClass = [];
             oldClass.forEach((elClass) => {
               elClass = elClass.split(" ");
-              console.log(elClass, "dwe");
               if (elClass != "") newClass.push("custom-select-lang" + elClass[0]);
             });
-            console.log(newClass);
             newClass.forEach((elClass) => {
               if (elClass == "custom-select-lang-panel") needy.setAttribute("data-da", ".menu-burger__body, 801, 3");
               needy.classList.add(elClass);
