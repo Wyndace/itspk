@@ -58,7 +58,8 @@ const htmlBuilding = () => {
 };
 
 const imgBuilding = () => {
-  return src(["./src/img/**/*.{png,jpeg,jpg,svg}"])
+  src(["./src/img/img/**/*.svg"]).pipe(gulpIf(!isBuilding, dest("./app/img"), dest(`./${buildDir}/img`)));
+  return src(["./src/img/img/**/*.{png,jpeg,jpg}"])
     .pipe(
       gulpIf(
         isBuilding,
@@ -71,10 +72,10 @@ const imgBuilding = () => {
 };
 
 const videoBuilding = () => {
-  return src(["./src/video/**/*.{mp4,mpeg,webm,mpg,avi,mov}"]).pipe(gulpIf(!isBuilding, dest("./app/video"), dest(`./${buildDir}/video`)));
+  return src(["./src/video/**/*.{mp4,mpeg,webm,mpg,avi,mov}"]).pipe(gulpIf(!isBuilding, dest("./app/video/"), dest(`./${buildDir}/video/`)));
 };
 const resourcesBuilding = () => {
-  return src("./src/resources/**").pipe(gulpIf(!isBuilding, dest("./app/resources"), dest(`./${buildDir}/resources`)));
+  return src("./src/resources/**").pipe(gulpIf(!isBuilding, dest("./app/resources/"), dest(`./${buildDir}/resources/`)));
 };
 
 const svgToSpriteBuilding = () => {
@@ -95,16 +96,16 @@ const iconfontBuilding = () => {
   return src(["./src/img/fonts/**/*.svg"])
     .pipe(
       iconfontCSS({
-        fontName: "test_font",
+        fontName: `${buildDir}-icons`,
         targetPath: "../../src/scss/_iconfont.scss",
         fontPath: "../../fonts/",
       })
     )
     .pipe(
       iconfont({
-        fontName: "test_font",
+        fontName: `${buildDir}-icons`,
         prependUnicode: true,
-        formats: ["woff2"],
+        formats: ["woff2", "svg"],
         normalize: true,
         fontHeight: 1001,
       })
@@ -449,7 +450,7 @@ const globalWatching = () => {
 
 exports.default = series(cleaner, parallel(htmlBuilding, fontsBuilding, imgBuilding, svgToSpriteBuilding, videoBuilding, resourcesBuilding, scriptsBuilding), iconfontBuilding, fontsStyleBuilding, stylesBuilding, globalWatching);
 
-exports.build = series(building, cleaner, faviconGenerator, parallel(htmlBuilding, fontsBuilding, svgToSpriteBuilding, videoBuilding, resourcesBuilding, scriptsBuilding), faviconInjector, iconfontBuilding, fontsStyleBuilding, stylesBuilding, cacheBuild, rewriteBuild);
+exports.build = series(building, cleaner, faviconGenerator, parallel(htmlBuilding, fontsBuilding, imgBuilding, svgToSpriteBuilding, videoBuilding, resourcesBuilding, scriptsBuilding), faviconInjector, iconfontBuilding, fontsStyleBuilding, stylesBuilding, cacheBuild, rewriteBuild);
 
 exports.prebuild = series(cleaner, faviconGenerator, parallel(htmlBuilding, fontsBuilding, imgBuilding, svgToSpriteBuilding, videoBuilding, resourcesBuilding, scriptsBuilding), faviconInjector, iconfontBuilding, fontsStyleBuilding, stylesBuilding, cachePreBuild, rewritePreBuild);
 
