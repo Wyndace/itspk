@@ -23,7 +23,7 @@
   @media (max-width: 563px) {
     &__container {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 22px;
     }
   }
@@ -93,6 +93,12 @@
       }
     }
   }
+
+  @media (max-width: 563px) {
+    &__list {
+      align-items: center;
+    }
+  }
 }
 
 .about {
@@ -118,12 +124,12 @@
 
   @media (max-width: 563px) {
     &__list {
-      align-items: flex-start;
+      align-items: center;
       gap: 26px;
     }
 
     &__item {
-      text-align: left;
+      text-align: center;
     }
   }
 }
