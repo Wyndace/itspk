@@ -1,1 +1,129 @@
-// Write your code here...
+.footer {
+  min-height: 141px;
+  color: cl(color-white);
+  background: cl(color-dark);
+
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+  }
+
+  &__about {
+    max-width: 304px;
+  }
+
+  @media (max-width: 563px) {
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 22px;
+    }
+  }
+}
+
+.contacts {
+  // .contacts__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+
+  // .contacts__item
+
+  &__item {
+    font: cl(font-base);
+    color: cl(color-white);
+  }
+
+  // .contacts__email
+
+  &__email {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      display: block;
+      width: 0;
+      height: 0.5px;
+      background: cl(color-light);
+      transition: width 0.5s ease 0s, right 0.5s ease 0s;
+    }
+
+    &:hover::after,
+    &._active::after {
+      width: 100%;
+    }
+  }
+
+  .phones {
+    &__list {
+      align-items: flex-start;
+    }
+
+    &__item {
+      flex-direction: row-reverse;
+      gap: 0 16px;
+    }
+
+    &__name {
+      font-size: 12px;
+      color: cl(color-white);
+    }
+
+    &__tel {
+      font-size: adaptive-value(18, 16, 1120);
+      color: cl(color-white);
+
+      &::after {
+        background: cl(color-light);
+      }
+    }
+  }
+}
+
+.about {
+  // .about__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 19px 0;
+  }
+
+  // .about__item
+
+  &__item {
+    font: cl(font-base);
+    text-align: right;
+  }
+
+  &__text {
+    color: cl(color-light);
+  }
+
+  @media (max-width: 563px) {
+    &__list {
+      align-items: flex-start;
+      gap: 26px;
+    }
+
+    &__item {
+      text-align: left;
+    }
+  }
+}
