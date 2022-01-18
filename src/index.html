@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    @include('./html/mixins/_head.html', {'title': 'IT-SPK'})
+  </head>
 
-<head>
-  @include('./html/mixins/_head.html', {'title': 'IT-SPK'})
-</head>
-
-<body style="color:#fbe0cd; background: #26a4ec;">
-  <div style="position: absolute; top:0; left: 0; right: 0; bottom: 0; background: url('./resources/back.png') center center no-repeat; opacity: 0.4; pointer-events: none;">
-  </div>
-  <div class="site-container">
-    <div style="padding: 15px">
-      <h1 style="margin:0; margin-bottom: 5px;">Привет, пользователь! <br> Эта страница необходима для удобного
-        просмотра всех существующих страниц!</h1>
+  <body style="color: #fbe0cd; background: #26a4ec">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('./resources/back.png') center center no-repeat; opacity: 0.4; pointer-events: none"></div>
+    <div class="site-container">
+      <div style="padding: 15px">
+        <h1 style="margin: 0; margin-bottom: 5px">
+          Привет, пользователь! <br />
+          Эта страница необходима для удобного просмотра всех существующих страниц!
+        </h1>
+      </div>
+      <main class="page">
+        <p style="margin: 0; margin-bottom: 5px; margin-left: 15px">Странички:</p>
+        <ul style="margin: 0">
+          <li>
+            <a style="color: #fbe0cd; text-decoration: underline" href="./page.html">Основная страница</a>
+          </li>
+        </ul>
+      </main>
     </div>
-    <main class="page">
-      <p style="margin: 0; margin-bottom: 5px; margin-left: 15px;">Странички:</p>
-      <ul style="margin: 0;">
-        <li>
-          <a style="color: #fbe0cd; text-decoration: underline;" href="./page.html">Основная страница</a>
-        </li>
-      </ul>
-    </main>
-  </div>
-</body>
-
+  </body>
 </html>
