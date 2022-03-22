@@ -1,15 +1,14 @@
 .header {
-  margin-top: 33px;
+  position: absolute;
+  top: 33px;
+  z-index: 50;
   min-width: 100vw;
 
   &__body {
     position: relative;
-    left: 0;
-    top: 0;
-    z-index: 50;
     width: 100%;
     min-height: adaptive-value(50, 25, 1120);
-    background-color: cl(color-ultra-dark);
+    background-color: transparent;
     transition: background-color 0.3s ease 0s;
   }
 
@@ -65,5 +64,14 @@
   }
 
   &__burger {
+  }
+
+  &._scroll {
+    position: fixed;
+    top: 0;
+
+    .header__body {
+      background-color: cl(color-ultra-dark);
+    }
   }
 }
