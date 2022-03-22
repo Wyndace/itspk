@@ -25,9 +25,10 @@
   --font-family: "Montserrat", sans-serif;
 
   // Typefaces
-  --font-base: 400 #{adaptive-value(18, 16, 1120)} / 140% #{cl(font-family)};
-  --font-title: 700 #{adaptive-value(50, 36, 1120)} / 140% #{cl(font-family)};
-  --font-bold: 700 #{adaptive-value(24, 22, 1120)} / 140% #{cl(font-family)};
+  --font-base: 400 #{adaptive-value(18, 16, 1920)} / 140% #{cl(font-family)};
+  --font-black: 900 #{adaptive-value(18, 16, 1920)} / 140% #{cl(font-family)};
+  --font-title: 700 #{adaptive-value(50, 36, 1920)} / 140% #{cl(font-family)};
+  --font-bold: 700 #{adaptive-value(24, 22, 1920)} / 140% #{cl(font-family)};
 }
 
 // ====================================================================================================================================================================
