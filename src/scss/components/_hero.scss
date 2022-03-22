@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  padding: 105px 0 0;
+  background: url("../img/hero/01.png") center;
+
+  // .hero__container
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: cl(color-midnight-blue, 0.25);
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    padding: cl(section-offset) 15px;
+
+    @media (max-width: 802px) {
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+  }
+
+  // .hero__title
+  &__title {
+    margin: 0 0 60px;
+    max-width: 568px;
+    font: cl(font-black);
+    font-size: adaptive-value(50, 36, 1920);
+    color: cl(color-light);
+  }
+
+  // .hero__text
+  &__text {
+    margin: 0 0 30px;
+  }
+
+  // .hero__subtitle
+  &__subtitle {
+    margin: 0;
+    font: cl(font-black);
+    color: cl(color-light);
+  }
+
+  // .hero__price
+  &__price {
+    color: cl(color-white);
+
+    // .hero__price_1
+
+    &_1 {
+      margin: 0;
+      font: cl(font-base);
+      font-size: adaptive-value(24, 18, 1920);
+    }
+
+    // .hero__price_2
+    &_2 {
+      margin: 0;
+      font: cl(font-base);
+    }
+  }
+
+  // .hero__numbers
+  &__numbers {
+    font: cl(font-bold);
+    font-size: adaptive-value(36, 24, 1920);
+  }
+
+  // .hero__letters
+
+  &__letters {
+    font: cl(font-bold);
+  }
+
+  // .hero__row
+  &__row {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    @media (max-width: 802px) {
+      flex-direction: column;
+    }
+  }
+
+  // .hero__btn
+  &__btn {
+  }
+
+  // .hero__buy-text
+  &__buy-text {
+    max-width: 460px;
+    font: cl(font-base);
+    font-size: adaptive-value(14, 12, 1920);
+    text-align: right;
+    color: cl(color-white);
+
+    @media (max-width: 802px) {
+      text-align: left;
+    }
+  }
+}
