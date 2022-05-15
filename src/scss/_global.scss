@@ -136,10 +136,15 @@ a {
   use {
     position: absolute;
     left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &_contain {
+    img {
+      object-fit: contain;
+    }
   }
 }
 
@@ -176,9 +181,10 @@ a {
     &:hover {
       box-shadow: 0 4px 4px cl(color-black, 0.25);
       transition: box-shadow 0.5s ease;
-        &.icon-arrow::after {
-          transform: translateX(4px);
-        }
+
+      &.icon-arrow::after {
+        transform: translateX(4px);
+      }
     }
 
     &:active {
@@ -195,16 +201,17 @@ a {
 
 .section {
   &-title {
-    max-width: fit-content;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    max-width: fit-content;
     font: cl(font-title);
-    color: cl(color-dark)
+    color: cl(color-dark);
   }
+
   &-text {
-    max-width: fit-content;
     margin: 0;
     padding: 0;
+    max-width: fit-content;
     font: cl(font-base);
     color: cl(color-txt);
   }

@@ -26,7 +26,6 @@
   @return clamp(#{$minSize}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$maxSize});
 }
 
-
 @function adaptive-value_old($startSize, $minSize, $maxWidth) {
   $addSize: 0;
 
@@ -42,6 +41,5 @@
 @function percents($px, $base) {
   @return math.div($px, $base) * 100%;
 }
-
 
 // ========================================================================================================================================================================

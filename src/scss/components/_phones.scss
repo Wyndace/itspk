@@ -12,16 +12,16 @@
 
   &__item {
     display: flex;
+    column-gap: adaptive-value(6px, 12px, $xxs, $template-size);
     align-items: flex-end;
     justify-content: center;
-    column-gap: adaptive-value(6px, 12px, $xxs, $template-size);
   }
 
   // .phones__name
 
   &__name {
     font: cl(font-base);
-    font-size: adaptive-value(10px, 12px, $xxs, $template-size)
+    font-size: adaptive-value(10px, 12px, $xxs, $template-size);
   }
 
   // .phones__tel
@@ -29,8 +29,10 @@
   &__tel {
     font: cl(font-bold);
     font-size: adaptive-value(16px, 17px, $xxs, $template-size);
-      &._underline::after {
-        bottom: 0;
-      }
+    white-space: nowrap;
+
+    &._underline::after {
+      bottom: 0;
     }
+  }
 }

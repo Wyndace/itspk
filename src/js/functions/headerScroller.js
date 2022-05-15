@@ -3,15 +3,10 @@
 const headerElement = document.querySelector('.header');
 const detectingScroll = function (entries) {
     console.log(entries)
-    if ((document.documentElement.clientWidth > 1340)) {
-        if (entries[0].isIntersecting) {
-            headerElement.classList.remove('_scroll');
-        } else {
-            headerElement.classList.add('_scroll');
-
-        }
+    if (entries[0].isIntersecting) {
+        headerElement.classList.remove('_scroll');
     } else {
-        headerElement.classList.add('_scroll')
+        headerElement.classList.add('_scroll');
     }
 };
 

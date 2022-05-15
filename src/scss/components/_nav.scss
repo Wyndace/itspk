@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: adaptive-value_old(10, 5, 1120) adaptive-value_old(40, 10, 1120);
+    gap: adaptive-value(5px, 10px, $xxs, $template-size) adaptive-value(10px, 40px, $xxs, $template-size);
   }
 
   // .nav__item
