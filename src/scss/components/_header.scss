@@ -1,15 +1,18 @@
 .header {
   position: absolute;
-  top: 33px;
+  left: 0;
   z-index: 50;
-  min-width: 100vw;
+  min-height: 10px;
 
   &__body {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: adaptive-value(50, 25, 1120);
+    padding: 30px 0;
+    min-height: adaptive-value_old(50, 25, 1120);
     background-color: transparent;
-    transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
   }
 
   // .header__container
@@ -67,10 +70,8 @@
   }
 
   &._scroll {
-    position: fixed;
-    top: 0;
-
     .header__body {
+      padding: 0;
       background-color: cl(color-ultra-dark);
     }
   }
