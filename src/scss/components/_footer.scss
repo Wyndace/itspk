@@ -80,12 +80,10 @@
     }
 
     &__name {
-      font-size: adaptive-value(6px, 12px, $xxs, $template-size);
       color: cl(color-white);
     }
 
     &__tel {
-      font-size: adaptive-value(16px, 18px, $xxs, $template-size);
       color: cl(color-white);
 
       &::after {
