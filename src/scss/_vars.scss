@@ -4,16 +4,16 @@
 
 :root {
   // Colors
-  --color-black: #{hextorgb(#000)};
-  --color-white: #{hextorgb(#fff)};
-  --color-dark: #{hextorgb(#001e42)};
-  --color-light: #{hextorgb(#00feff)};
-  --color-txt: #{hextorgb(#252d37)};
-  --color-txt-light: #{hextorgb(#a5aaaf)};
-  --color-ultra-dark: #{hextorgb(#06182f)};
-  --color-midnight-blue: #{hextorgb(#013571)};
-  --color-gray: #{hextorgb(#f2f2f2)};
-  --color-text: #{hextorgb(#002047)};
+  --color-black: #{hex-to-rgb(#000)};
+  --color-white: #{hex-to-rgb(#fff)};
+  --color-dark: #{hex-to-rgb(#001e42)};
+  --color-light: #{hex-to-rgb(#00feff)};
+  --color-txt: #{hex-to-rgb(#252d37)};
+  --color-txt-light: #{hex-to-rgb(#a5aaaf)};
+  --color-ultra-dark: #{hex-to-rgb(#06182f)};
+  --color-midnight-blue: #{hex-to-rgb(#013571)};
+  --color-gray: #{hex-to-rgb(#f2f2f2)};
+  --color-text: #{hex-to-rgb(#002047)};
 
   // Indents
   --section-offset: 60px;
@@ -22,13 +22,13 @@
   --border-radius: 4px;
 
   // Fonts
-  --font-family: "Montserrat", sans-serif;
+  --font-family: #{$font-family}, sans-serif;
 
   // Typefaces
-  --font-base: 400 #{adaptive-value(18, 16, 1920)} / 140% #{cl(font-family)};
-  --font-black: 900 #{adaptive-value(18, 16, 1920)} / 140% #{cl(font-family)};
-  --font-title: 700 #{adaptive-value(50, 36, 1920)} / 140% #{cl(font-family)};
-  --font-bold: 700 #{adaptive-value(24, 22, 1920)} / 140% #{cl(font-family)};
+  --font-base: 400 #{adaptive-value(16px, 18px, $xxs, $template-size)} / 140% #{cl(font-family)};
+  --font-black: 900 #{adaptive-value(16px, 18px, $xxs, $template-size)} / 140% #{cl(font-family)};
+  --font-title: 700 #{adaptive-value(36px, 50px, $xxs, $template-size)} / 140% #{cl(font-family)};
+  --font-bold: 700 #{adaptive-value(22px, 24px, $xxs, $template-size)} / 140% #{cl(font-family)};
 }
 
 // ====================================================================================================================================================================

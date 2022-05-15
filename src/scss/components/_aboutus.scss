@@ -1,0 +1,18 @@
+.aboutus {
+  padding: 30px 0;
+  // .aboutus__container
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 70px
+  }
+
+  // .aboutus__title
+  &__title {
+  }
+
+  // .aboutus__text
+  &__text {
+    max-width: 800px
+  }
+}

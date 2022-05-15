@@ -3,7 +3,7 @@
 
 // ========================================================================================================================================================================
 
-@function hextorgb($hex) {
+@function hex-to-rgb($hex) {
   @return red($hex), green($hex), blue($hex);
 }
 
@@ -19,7 +19,15 @@
   }
 }
 
-@function adaptive-value($startSize, $minSize, $maxWidth) {
+@function adaptive-value($minSize, $maxSize, $minWidth, $maxWidth) {
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $y-axis-intersection: -1 * $minWidth * $slope + $minSize;
+
+  @return clamp(#{$minSize}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$maxSize});
+}
+
+
+@function adaptive-value_old($startSize, $minSize, $maxWidth) {
   $addSize: 0;
 
   @if ($startSize > $minSize) {
@@ -30,5 +38,10 @@
 
   @return calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 }
+
+@function percents($px, $base) {
+  @return math.div($px, $base) * 100%;
+}
+
 
 // ========================================================================================================================================================================

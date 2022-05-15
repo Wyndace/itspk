@@ -260,7 +260,7 @@
       }
 
       &__tel {
-        font-size: adaptive-value(18, 16, 1120);
+        font-size: adaptive-value_old(18, 16, 1120);
         color: cl(color-dark);
 
         &::after {
