@@ -1,2 +1,10 @@
 .page {
+  // .page__hero
+  &__hero {
+    margin-bottom: adaptive-value(10px, 60px, $xxs, $template-size);
+  }
+  // .page__aboutus
+  &__aboutus {
+    margin-bottom: adaptive-value(10px, 30px, $xxs, $template-size);
+  }
 }
