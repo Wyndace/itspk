@@ -14,40 +14,23 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-
-    @include adaptive-property(column-gap, 12, 12, 1120, 1920, 1);
+    column-gap: adaptive-value(6px, 12px, $xxs, $template-size);
   }
 
   // .phones__name
 
   &__name {
     font: cl(font-base);
-    font-size: adaptive-value(12, 10, 1120);
+    font-size: adaptive-value(10px, 12px, $xxs, $template-size)
   }
 
   // .phones__tel
 
   &__tel {
-    position: relative;
     font: cl(font-bold);
-    font-size: adaptive-value(17, 10, 1120);
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      display: block;
-      width: 0;
-      height: 0.5px;
-      background: cl(color-light);
-      transition: width 0.5s ease 0s, right 0.5s ease 0s;
+    font-size: adaptive-value(16px, 17px, $xxs, $template-size);
+      &._underline::after {
+        bottom: 0;
+      }
     }
-
-    &:hover::after,
-    &._active::after {
-      width: 100%;
-    }
-  }
 }

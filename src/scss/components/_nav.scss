@@ -6,33 +6,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: adaptive-value(10, 5, 1120) adaptive-value(40, 10, 1120);
+    gap: adaptive-value_old(10, 5, 1120) adaptive-value_old(40, 10, 1120);
   }
 
   // .nav__item
 
   &__item {
-    position: relative;
     font: cl(font-base);
     color: cl(color-white);
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -4px;
-      display: block;
-      width: 0;
-      height: 1px;
-      background: cl(color-light);
-      transition: width 0.5s ease 0s, right 0.5s ease 0s;
-    }
-
-    &:hover::after,
-    &._active::after {
-      width: 100%;
-    }
   }
 
   // .nav__link

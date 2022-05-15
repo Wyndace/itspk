@@ -1,31 +1,35 @@
 @font-face {
-  src: url("../../fonts/itspk-icons.woff2") format("woff2");
-  font-family: "itspk-icons";
+	src: url("../fonts/itspk-icons.woff2") format("woff2");
+	font-family: "itspk-icons";
 }
 
 .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  &::after {
-    font-family: "itspk-icons", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-variant: normal;
-    text-decoration: none;
-    text-transform: none;
-    background-color: inherit;
-  }
+	&::after {
+		transition: transform 0.3s ease;
+		position: relative;
+		font-family: "itspk-icons", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-variant: normal;
+		text-decoration: none;
+		text-transform: none;
+		background-color: inherit;
+		margin-left: 11px;
+	}
 
-  &-arrow::after {
-    content: "\E001";
-  }
+	&-arrow::after {
+		content: "\E001";
+		transform: translateX(0);
+	}
 
-  &-download::after {
-    content: "\E002";
-  }
+	&-download::after {
+		top: 0;
+		content: "\E002";
+	}
 }
