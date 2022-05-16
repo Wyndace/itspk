@@ -11,5 +11,10 @@
 
   // .page__services
   &__services {
+    margin-bottom: adaptive-value(0px, 10px, $xxs, $template-size);
+  }
+
+  // .page__effective
+  &__effective {
   }
 }
