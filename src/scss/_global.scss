@@ -200,20 +200,29 @@ a {
 }
 
 .section {
-  &-title {
-    margin: 0;
-    padding: 0;
-    max-width: fit-content;
-    font: cl(font-title);
-    color: cl(color-dark);
-  }
-
+  // .section-text
   &-text {
     margin: 0;
     padding: 0;
     max-width: fit-content;
     font: cl(font-base);
     color: cl(color-txt);
+  }
+
+  // .section-title,
+  // .section-title_sub
+  &-title,
+  &-title_sub {
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+    font: cl(font-title);
+    color: cl(color-dark);
+
+    // .section-title_sub
+    &_sub {
+      font: cl(font-bold);
+    }
   }
 }
 
