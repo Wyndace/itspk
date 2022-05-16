@@ -25,7 +25,7 @@
     visibility: hidden;
     pointer-events: none;
 
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       position: relative;
       z-index: 11;
       display: flex;
@@ -135,7 +135,7 @@
   }
 
   ._active & {
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       &__icon {
         &::before {
           animation: down-rotate 0.6s ease-out both;

@@ -22,7 +22,7 @@
     z-index: 2;
     padding: cl(section-offset) 15px;
 
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       padding-top: 80px;
       padding-bottom: 30px;
     }
@@ -86,7 +86,7 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       flex-direction: column;
     }
   }
@@ -103,7 +103,7 @@
     text-align: right;
     color: cl(color-white);
 
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       text-align: left;
     }
   }

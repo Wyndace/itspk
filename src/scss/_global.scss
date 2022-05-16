@@ -175,6 +175,10 @@ a {
   &:active {
     box-shadow: 0 4px 4px cl(color-black, 0.25);
     transition: box-shadow 0.25s ease;
+
+    &.icon-arrow::after {
+      transform: translateX(4px);
+    }
   }
 
   @media (any-hover: hover) {
@@ -190,6 +194,14 @@ a {
     &:active {
       box-shadow: none;
       transition: box-shadow 0.25s ease;
+
+      &.icon-arrow::after {
+        transform: translateX(0);
+      }
+    }
+
+    &.icon-arrow {
+      transition-duration: 0.1s;
     }
   }
 }

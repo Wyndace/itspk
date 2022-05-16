@@ -38,7 +38,7 @@
   }
 
   [data-select="lang"] {
-    @media (max-width: 802px) {
+    @media (max-width: $md) {
       position: absolute;
       left: 0;
       top: 0;

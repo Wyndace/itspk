@@ -20,7 +20,7 @@
     max-width: 304px;
   }
 
-  @media (max-width: 563px) {
+  @media (max-width: $sm) {
     &__container {
       flex-direction: column;
       align-items: center;
@@ -92,7 +92,7 @@
     }
   }
 
-  @media (max-width: 563px) {
+  @media (max-width: $sm) {
     &__list {
       align-items: center;
     }
@@ -120,7 +120,7 @@
     color: cl(color-light);
   }
 
-  @media (max-width: 563px) {
+  @media (max-width: $sm) {
     &__list {
       align-items: center;
       gap: 26px;
