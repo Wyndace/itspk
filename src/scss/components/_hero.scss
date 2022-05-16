@@ -83,7 +83,7 @@
   // .hero__row
   &__row {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
 
     @media (max-width: 802px) {
@@ -99,7 +99,7 @@
   &__buy-text {
     max-width: 460px;
     font: cl(font-base);
-    font-size: adaptive-value_old(14, 12, 1920);
+    font-size: adaptive-value(12px, 14px, $xxs, $template-size);
     text-align: right;
     color: cl(color-white);
 
