@@ -230,11 +230,11 @@ a {
     max-width: fit-content;
     font: cl(font-title);
     color: cl(color-dark);
+  }
 
-    // .section-title_sub
-    &_sub {
-      font: cl(font-bold);
-    }
+  // .section-title_sub
+  &-title_sub {
+    font: cl(font-bold);
   }
 }
 
