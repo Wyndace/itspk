@@ -23,6 +23,10 @@
     transition: transform 0.3s ease;
   }
 
+  &-left {
+    flex-direction: row-reverse;
+  }
+
   &-arrow::after {
     content: "\E001";
     transform: translateX(0);
