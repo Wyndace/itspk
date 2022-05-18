@@ -16,5 +16,11 @@
 
   // .page__effective
   &__effective {
+    margin-bottom: adaptive-value(0px, 95px, 649px, $template-size);
+  }
+
+  // .page__purpose
+  &__purpose {
+    margin-bottom: adaptive-value(15px, 80px, 649px, $template-size);
   }
 }

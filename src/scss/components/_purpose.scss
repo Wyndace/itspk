@@ -1,0 +1,40 @@
+.purpose {
+  padding: 30px 0;
+
+  // .purpose__container
+  &__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    width: 100%;
+    gap: 30px;
+  }
+
+  // .purpose__title
+  &__title {
+    display: flex;
+    flex: 0 0 354px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    gap: 15px;
+  }
+
+  // .purpose__subtitle
+  &__subtitle {
+  }
+}
+
+.title-purpose {
+  // .title-purpose__img
+  &__img {
+    flex: 0 0 adaptive-value(150px, 165px, $xxs, $template-size);
+    height: 200px;
+  }
+
+  // .title-purpose__text
+  &__text {
+    flex: 0 0 adaptive-value(130px, 175px, $xxs, $template-size);
+    height: 100%;
+  }
+}
