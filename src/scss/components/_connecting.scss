@@ -14,8 +14,8 @@
   &__list {
     counter-reset: num;
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     gap: 70px 40px;
 
     @media (max-width: $md) {
@@ -32,6 +32,11 @@
     font: cl(font-base);
     font-weight: 700;
     color: cl(color-dark);
+    cursor: default;
+
+    &:hover.connecting__items::before {
+      transform: translateY(40%);
+    }
 
     &::before {
       counter-increment: num;
@@ -46,13 +51,7 @@
       text-align: right;
       color: cl(color-light);
       transform: translateY(50%);
-
-      @media (max-width: $md) {
-      }
-    }
-
-    @media (max-width: $md) {
-      flex: 0 0 70%;
+      transition: transform 0.3s ease;
     }
   }
 }
