@@ -23,4 +23,10 @@
   &__purpose {
     margin-bottom: adaptive-value(15px, 80px, 649px, $template-size);
   }
+
+  // .page__connecting
+  &__connecting {
+    margin-bottom: adaptive-value(30px, 115px, $xxs, $template-size);
+
+  }
 }
