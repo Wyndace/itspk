@@ -34,10 +34,6 @@
     color: cl(color-dark);
     cursor: default;
 
-    &:hover.connecting__items::before {
-      transform: translateY(40%);
-    }
-
     &::before {
       counter-increment: num;
       content: counter(num);
@@ -52,6 +48,10 @@
       color: cl(color-light);
       transform: translateY(50%);
       transition: transform 0.3s ease;
+    }
+
+    &:hover.connecting__items::before {
+      transform: translateY(40%);
     }
   }
 }
