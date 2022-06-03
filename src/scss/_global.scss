@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   font-family: cl(font-family), serif;
-  background-color: cl(color-white);
+  background-color: $background;
 }
 
 img {
@@ -170,38 +170,92 @@ a {
   &_primary {
     color: cl(color-text);
     background: cl(color-light);
-  }
 
-  &:active {
-    box-shadow: 0 4px 4px cl(color-black, 0.25);
-    transition: box-shadow 0.25s ease;
-
-    &.icon-arrow::after {
-      transform: translateX(4px);
-    }
-  }
-
-  @media (any-hover: hover) {
-    &:hover {
+    &:active {
       box-shadow: 0 4px 4px cl(color-black, 0.25);
-      transition: box-shadow 0.5s ease;
+      transition: box-shadow 0.25s ease;
 
       &.icon-arrow::after {
         transform: translateX(4px);
       }
     }
 
-    &:active {
-      box-shadow: none;
-      transition: box-shadow 0.25s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 4px 4px cl(color-black, 0.25);
+        transition: box-shadow 0.5s ease;
 
-      &.icon-arrow::after {
-        transform: translateX(0);
+        &.icon-arrow::after {
+          transform: translateX(4px);
+        }
+      }
+
+      &:active {
+        box-shadow: none;
+        transition: box-shadow 0.25s ease;
+
+        &.icon-arrow::after {
+          transform: translateX(0);
+        }
+      }
+
+      &.icon-arrow {
+        transition-duration: 0.1s;
+      }
+    }
+  }
+
+  &_secondary {
+    position: relative;
+    border: 2px solid currentColor;
+    padding: adaptive-value(12px, 15px, $xxs, $template-size) adaptive-value(5px, 22px, $xxs, $template-size);
+    font-size: adaptive-value(12px, 14px, $xxs, $template-size);
+    color: cl(color-dark);
+    background: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      right: -5px;
+      top: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: cl(color-gray);
+      transform: scale(0);
+      transition: transform 0.2s ease;
+    }
+
+    &:active {
+      &::before {
+        transform: scale(1);
+      }
+
+      &.icon-download {
+        &::after {
+          transform: scale(0.75);
+        }
       }
     }
 
-    &.icon-arrow {
-      transition-duration: 0.1s;
+    &.icon {
+      &::after {
+        font-size: adaptive-value(22px, 24px, $xxs, $template-size);
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      &:active {
+        &::before {
+          transform: scale(0);
+        }
+      }
     }
   }
 }
@@ -209,6 +263,7 @@ a {
 .logo {
   width: 126px;
   height: 42px;
+  cursor: pointer;
 }
 
 .section {
@@ -230,6 +285,7 @@ a {
     max-width: fit-content;
     font: cl(font-title);
     color: cl(color-dark);
+    cursor: default;
   }
 
   // .section-title_sub
