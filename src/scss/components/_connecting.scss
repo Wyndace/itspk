@@ -39,19 +39,19 @@
       content: counter(num);
       position: absolute;
       left: -17px;
-      bottom: 50%;
+      bottom: 40%;
       z-index: -1;
       display: inline-block;
       font: cl(font-bold);
       font-size: 96px;
       text-align: right;
       color: cl(color-light);
-      transform: translateY(50%);
+      transform: translateY(40%);
       transition: transform 0.3s ease;
     }
 
     &:hover.connecting__items::before {
-      transform: translateY(40%);
+      transform: translateY(30%);
     }
   }
 }
