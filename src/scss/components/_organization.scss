@@ -13,10 +13,9 @@
 
   // .organization__items
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    gap: 15px 30px;
   }
 
   // .organization__item
