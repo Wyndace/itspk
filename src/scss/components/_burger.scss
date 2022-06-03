@@ -288,7 +288,7 @@
       font-size: 18px;
       color: cl(color-dark);
 
-      &::after {
+      ._underline::after {
         bottom: -1px;
         background: cl(color-dark);
       }
