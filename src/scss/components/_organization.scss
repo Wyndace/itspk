@@ -14,13 +14,14 @@
   // .organization__items
   &__items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
   }
 
   // .organization__item
   &__item {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
     font: cl(font-base);
     font-size: adaptive-value(12px, 13px, $xxs, $template-size);
     color: cl(color-txt-light);
@@ -44,6 +45,7 @@
     &::before {
       content: "- ";
     }
+
     &::after {
       content: ";";
     }
