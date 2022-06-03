@@ -33,7 +33,6 @@
     margin: 0 0 60px;
     max-width: 568px;
     font: cl(font-black);
-    font-size: adaptive-value_old(50, 36, 1920);
     color: cl(color-light);
   }
 
@@ -45,7 +44,8 @@
   // .hero__subtitle
   &__subtitle {
     margin: 0;
-    font: cl(font-black);
+    font: cl(font-base);
+    font-weight: 900;
     color: cl(color-light);
   }
 
@@ -58,7 +58,7 @@
     &_1 {
       margin: 0;
       font: cl(font-base);
-      font-size: adaptive-value_old(24, 18, 1920);
+      font-size: adaptive-value(18px, 24px, $xxs, $template-size);
     }
 
     // .hero__price_2
@@ -71,7 +71,7 @@
   // .hero__numbers
   &__numbers {
     font: cl(font-bold);
-    font-size: adaptive-value_old(36, 24, 1920);
+    font-size: adaptive-value(24px, 36px, $xxs, $template-size);
   }
 
   // .hero__letters

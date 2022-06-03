@@ -29,6 +29,9 @@ let isBuilding = false;
 let buildDir = require("path").basename(__dirname);
 const faviconDataFile = "faviconData.json";
 
+const done = () => {
+};
+
 const building = (done) => {
   isBuilding = true;
   done();

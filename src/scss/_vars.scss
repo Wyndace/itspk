@@ -26,7 +26,7 @@
 
   // Typefaces
   --font-base: 400 #{adaptive-value(16px, 18px, $xxs, $template-size)} / 140% #{cl(font-family)};
-  --font-black: 900 #{adaptive-value(16px, 18px, $xxs, $template-size)} / 140% #{cl(font-family)};
+  --font-black: 900 #{adaptive-value(36px, 50px, $xxs, $template-size)} / 140% #{cl(font-family)};
   --font-title: 700 #{adaptive-value(36px, 50px, $xxs, $template-size)} / 140% #{cl(font-family)};
   --font-bold: 700 #{adaptive-value(22px, 24px, $xxs, $template-size)} / 140% #{cl(font-family)};
 }
