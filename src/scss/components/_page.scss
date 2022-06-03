@@ -31,5 +31,15 @@
 
   // .page__prices
   &__prices {
+    margin-bottom: adaptive-value(30px, 60px, $xxs, $template-size);
+  }
+
+  // .page__clients
+  &__clients {
+    margin-bottom: adaptive-value(35px, 66px, $sm, $template-size);
+  }
+
+  // .page__organization
+  &__organization {
   }
 }
