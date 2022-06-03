@@ -1,0 +1,52 @@
+.card-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid cl(color-dark);
+  padding: 40px 20px;
+  width: 100%;
+  cursor: default;
+
+  // .card-prices__type
+  &__type {
+    margin-bottom: 15px;
+    font: cl(font-base);
+    text-align: center;
+    color: cl(color-dark);
+  }
+
+  // .card-prices__name
+  &__name {
+    margin: 0 0 5px;
+    font: cl(font-bold);
+    font-size: 26px;
+    text-align: center;
+    color: cl(color-dark);
+  }
+
+  // .card-prices__price
+  &__price {
+    margin-bottom: 5px;
+    font: cl(font-bold);
+    font-size: 70px;
+    text-align: center;
+    color: cl(color-dark);
+  }
+
+  // .card-prices__currency
+  &__currency {
+    font: cl(font-base);
+    font-size: 20px;
+    text-align: center;
+    color: cl(color-dark);
+  }
+
+  // .card-prices__count
+  &__count {
+    margin-top: 30px;
+    font: cl(font-base);
+    text-align: center;
+    color: cl(color-dark);
+  }
+}

@@ -26,7 +26,10 @@
 
   // .page__connecting
   &__connecting {
-    margin-bottom: adaptive-value(30px, 115px, $xxs, $template-size);
+    margin-bottom: adaptive-value(0, 85px, $xxs, $template-size);
+  }
 
+  // .page__prices
+  &__prices {
   }
 }
