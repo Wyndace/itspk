@@ -1,0 +1,29 @@
+.clients {
+  // .clients__container
+  &__container {
+  }
+
+  // .clients__title
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  // .clients__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: adaptive-value(5px, 20px, $xxs, $template-size) adaptive-value(10px, 70px, $xxs, $template-size);
+
+    @media (max-width: $sm) {
+      padding: 20px 0;
+      filter: grayscale(1);
+    }
+  }
+
+  // .clients__item
+  &__item {
+    width: adaptive-value(110px, 150px, $xxs, $template-size);
+    height: adaptive-value(75px, 110px, $xxs, $template-size);
+  }
+}
