@@ -41,5 +41,10 @@
 
   // .page__organization
   &__organization {
+    margin-bottom: adaptive-value(55px, 60px, $sm, $template-size);
+  }
+
+  // .page__form-block
+  &__form-block {
   }
 }

@@ -1,0 +1,26 @@
+.form-block {
+  padding: 30px 0;
+  background: cl(color-dark) url("../img/form-block/back.jpg") center no-repeat;
+
+  // .form-block__container
+  &__container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(43%, 1fr));
+    gap: 20px 130px;
+  }
+
+  // .form-block__form
+  &__form {
+    margin-top: 20px;
+  }
+
+  // .form-block__form
+  .form-block__title {
+    margin: 0;
+    font: cl(font-bold);
+    font-size: adaptive-value(33px, 36px, $xxs, $template-size);
+    color: cl(color-white);
+  }
+}
