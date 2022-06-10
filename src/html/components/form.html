@@ -6,24 +6,24 @@
     <legend class="form__title _hidden">Форма - заявка на связь</legend>
     <div class="form__fields">
       <div class="form__item">
-        <input type="text" placeholder="Имя" data-form_input_text name="first_name" id="first_name" class="form__input">
-        <label for="first_name" class="form__label">Имя</label>
+        <input type="text" placeholder="Имя" data-form_input_text name="first_name" id="@parent-class_first_name" class="form__input">
+        <label for="@parent-class_first_name" class="form__label">Имя</label>
       </div>
       <div class="form__item">
-        <input type="tel" placeholder="Номер телефона" data-form_require data-form_input_tel name="tel" id="tel" class="form__input">
-        <label for="tel" class="form__label">Номер телефона</label>
+        <input type="tel" placeholder="Номер телефона" data-form_require data-form_input_tel name="tel" id="@parent-class_tel" class="form__input">
+        <label for="@parent-class_tel" class="form__label">Номер телефона</label>
       </div>
       <div class="form__item">
-        <input type="email" placeholder="E-mail" data-form_input_email name="email" id="email" class="form__input">
-        <label for="email" class="form__label">E-mail</label>
+        <input type="email" placeholder="E-mail" data-form_input_email name="email" id="@parent-class_email" class="form__input">
+        <label for="@parent-class_email" class="form__label">E-mail</label>
       </div>
       <div class="form__item">
-        <textarea data-form_input_text placeholder="Сообщение" name="message" id="message" class="form__textarea"></textarea>
-        <label for="message" class="form__label">Сообщение</label>
+        <textarea data-form_input_text placeholder="Сообщение" name="message" id="@parent-class_message" class="form__textarea"></textarea>
+        <label for="@parent-class_message" class="form__label">Сообщение</label>
       </div>
       <div class="form__item">
         @include('../mixins/checkbox.html', {'text': 'Даю согласие на обработку персональных данных', 'parent-class': 'form',
-        'id': 'agreement', 'name': 'agreement', 'type': 'checkbox', 'data-attrs': 'data-form_require'})
+        'id': '@parent-class_agreement', 'name': 'agreement', 'type': 'checkbox', 'data-attrs': 'data-form_require'})
       </div>
       <button type="submit" data-submit class="form__btn btn btn_primary _btn-reset icon icon-arrow">Отправить</button>
     </div>
