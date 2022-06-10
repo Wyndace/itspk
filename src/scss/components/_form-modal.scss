@@ -1,0 +1,20 @@
+.form-modal {
+  .form {
+    .checkbox__label {
+      color: cl(color-dark);
+
+      &::before {
+        background-color: cl(color-gray);
+      }
+
+      &::after {
+        background: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='8' height='8' fill='%2300FEFF'/%3E%3C/svg%3E%0A") center/50% no-repeat;
+      }
+    }
+
+    &__input,
+    &__textarea {
+      background-color: cl(color-gray);
+    }
+  }
+}
