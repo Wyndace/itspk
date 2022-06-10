@@ -56,9 +56,7 @@ fileInclude.includ("./functions/surveySlide.js");
 
 // ==== Modal windows | Require ScrollDisabling.js ========================================================================================================================
 
-/*
-fileInclude.includ("./functions/modalWindowCreator.js");
-*/
+fileInclude.include("./functions/modalWindowCreator.js");
 
 // ========================================================================================================================================================================
 
