@@ -1,5 +1,4 @@
 .modal-iframe {
-  // .modal-iframe__iframe
   .modal-window__content {
     max-width: 90vw;
     max-height: 80vh;
@@ -9,6 +8,7 @@
     top: 10px;
   }
 
+  // .modal-iframe__iframe
   &__iframe {
     border: none;
     width: 90vw;

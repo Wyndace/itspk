@@ -27,7 +27,7 @@ if (modalWindows.length > 0) {
   for (let index = 0; index < modalWindows.length; index++) {
     const modalWindow = modalWindows[index];
     if (modalWindow.classList.contains("_active")) {
-      modalWindow.classList.remove("_active");
+      scrollDisabling(document.querySelector("body"), true);
     }
   }
 }
