@@ -36,4 +36,16 @@
     content: "\E002";
     top: 0;
   }
+
+  &-tick {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "\E003";
+      margin-bottom: 25px;
+      margin-left: 0;
+    }
+  }
 }
