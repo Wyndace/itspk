@@ -28,8 +28,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 40px;
-    max-width: #{$container-size}px;
+    min-height: 520px;
+    max-width: 375px;
     color: #000;
     background-color: #fff;
     gap: 40px;
