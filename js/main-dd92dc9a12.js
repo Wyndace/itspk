@@ -1,0 +1,1 @@
+const buttonTapingAnimation=(t=document.querySelector("button"),e=300)=>{t.classList.add("_tapped"),setTimeout(()=>{t.classList.remove("_tapped")},e)};document.addEventListener("click",t=>{t.target.closest("button")&&buttonTapingAnimation(t.target.closest("button"),300)});
