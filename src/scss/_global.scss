@@ -111,7 +111,7 @@ a {
 ._container {
   margin: 0 auto;
   padding: 0 #{$safe-padding}px;
-  max-width: #{$container-size - ($safe-padding * 2)}px;
+  max-width: #{$container-size + ($safe-padding * 2)}px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
