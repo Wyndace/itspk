@@ -73,14 +73,16 @@ if (forms.length > 0) {
           }
         } else {
           let result = {
-            message: "All OK :Р",
+            message: "Запрос успешно отправлен, мы свяжемся с вами в ближайшее время",
           };
-          alert(result.message);
+          const successModal = document.querySelector('#success-modal');
+          successModal.querySelector('.success-modal__message').innerHTML = result.message;
+          modalOpen(successModal);
           form.reset();
         }
         form.classList.remove("_sending");
       } else {
-        alert("Fill the all fields!");
+        // alert("Fill the all fields!");
       }
     }
 
